@@ -12,20 +12,6 @@ if ($newdata = get_nCoV_news()) {
      * curedCount       治愈人数
      * deadCount		死亡人数
      */
-    for ($i = 0; $i <= 32; $i++) {
-        //for ($x=0; $x<=12; $x++) {
-        //echo $newdata[$i]['provinceShortName'] . ' ';
-        $provinceShortName = $newdata[$i]['provinceShortName'];
-        //echo $newdata[$i]['confirmedCount'] . ' ';
-        $confirmedCount = $newdata[$i]['confirmedCount'];
-        //echo $newdata[$i]['deadCount'] . ' ';
-        $deadCount = $newdata[$i]['deadCount'];
-        //echo $newdata[$i]['curedCount'] . '<br>';
-        $curedCount = $newdata[$i]['curedCount'];
-        
-        
-    }
-    echo "省级数据更新完成<br>";
 
     foreach ($newdata as $item) {
 
@@ -52,6 +38,7 @@ if ($newdata = get_nCoV_news()) {
     }
 
     mysqli_close($conn);
+    echo "省级数据更新完成<br>";
     echo "市级数据更新完成";
 }
 
